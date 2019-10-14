@@ -1,55 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>teste</title>
-    <link rel="stylesheet" type="text/css" href="calc.css">
+<meta charset="utf-8">
+<title>cadastro de tarefas</title>
 </head>
 <body>
-    <div id="est">
-        <form method="POST" id="formulario" action="calc.php">
-            Escolha o tipo de calculo que voce quer fazer
-            <select name="opt">
-                <option value="1">+</option>
-                <option value="2">-</option>
-                <option value="3">x</option>
-                <option value="4">/</option>
-            </select>
-            <fieldset id="camp">
-                Numero 1
-                <input type="number" min="0" max="999" name="v1"></br>
-                Numero 2
-                <input type="number" min="0" max="999" name="v2"></br>
-                <input type="submit" value="Calcular" id="btncalcular">
-            </fieldset>
-        </fomr>
-    </div>
+  <fieldset>
+  <form>
+    <legend>Crie Sua tarefa</legend>
+    <p><label>tarefa</label>    : <input type="text" name="tarefa" ></p>
+    <p><label>conclusão</label> : <input type="date"></p>
+  </fieldset>
+  <input type="submit" value="Enviar">
+  </form>
 </body>
-<script>
-    /**
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4){
-            document.getElementById('result').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.open('GET', 'https://www.google.com');
-    xhr.send();
-*/
-    let btnCalcular = document.getElementById('btncalcular');
-    btnCalcular.addEventListener("click", (e) => {
-        e.preventDefault();
 
-        var form = new FormData(document.getElementById('formulario'));
-        fetch("/calc.php", {
-            method: "POST",
-            body: form
-        }).then((resp)=>{
-            console.log(resp);
-        });
-    });
-
-
-    
-</script>
 </html>

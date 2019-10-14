@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/*estilo da tabela*/
+table#tab{
+    border:1px solid #606060;
+    border-spacing: 0px;
+    margin-right: auto;
+}
+table#tab td{
+    border:1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
