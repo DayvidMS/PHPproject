@@ -12,3 +12,7 @@ table#tab td{
     text-align: center;
     vertical-align: top;
 }
+/*div*/
+div#inclu{
+    margin-top: 5px;
+}
